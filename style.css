@@ -3,9 +3,8 @@ body{
   background-color: #273243;
   background:linear-gradient(#07fb8d 50%,#33456e 50%);
   display: flex;
-  justify-content:left;
+  justify-content:center;
   align-items: center;
-  padding-left: 50px;
 }
 .calculator{
   background-color: #273243;
