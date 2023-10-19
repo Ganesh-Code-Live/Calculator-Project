@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="screen-container">
+      <input type="text" id="display">
+    </div>
+
+    <div class="button-container">
+      <button class="icon" onclick="display='';
+      document.querySelector('#display').value = display;"><i class="fa-solid fa-c"></i></button>
+      <button class="icon" onclick="display+='%';
+      document.querySelector('#display').value = display;"><i class="fa-solid fa-percent"></i></button>
+      <button class="icon"><i class="fa-solid fa-delete-left"></i></button>
+      <button class="icon" onclick="display+='/';
+      document.querySelector('#display').value = display;"><i class="fa-solid fa-divide"></i></button>
+      <button class="numbers" onclick="display+='7';
+      document.querySelector('#display').value = display;">7</button>
+      <button class="numbers" onclick="display+='8';
+      document.querySelector('#display').value = display;">8</button>
+      <button class="numbers" onclick="display+='9';
+      document.querySelector('#display').value = display;">9</button>
+      <button class="icon" onclick="display+='*';
+      document.querySelector('#display').value = display;"><i class="fa-solid fa-xmark"></i></button>
+      <button class="numbers" onclick="display+='4';
+      document.querySelector('#display').value = display;">4</button>
+      <button class="numbers" onclick="display+='5';
+      document.querySelector('#display').value = display;">5</button>
+      <button class="numbers" onclick="display+='6';
+      document.querySelector('#display').value = display;">6</button>
+      <button class="icon" onclick="display+='-';
+        document.querySelector('#display').value = display"><i class="fa-solid fa-minus"></i></button>
+      <button class="numbers" onclick="display+='1';
+      document.querySelector('#display').value = display;">1</button>
+      <button class="numbers" onclick="display+='2';
+      document.querySelector('#display').value = display;">2</button>
+      <button class="numbers" onclick="display+='3';
+      document.querySelector('#display').value = display;">3</button>
+      <button class="icon"onclick="display+='+';
+      document.querySelector('#display').value = display;"><i class="fa-solid fa-plus"></i></button>
+      <button class="numbers" onclick="display+='00';
+      document.querySelector('#display').value = display;">00</button>
+      <button class="numbers" onclick="display+='0';
+      document.querySelector('#display').value = display;">0</button>
+      <button class="numbers" onclick="display+='.';
+      document.querySelector('#display').value = display;">.</button>
+      <button class="equal" onclick="display=eval(display);
+      document.querySelector('#display').value = display;">=</button>
+    </div>
+  </div>
+
+<script>
+  let display=" ";
+  document.querySelector('#display').value = display;
+</script>
+</body>
+</html>
