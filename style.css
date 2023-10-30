@@ -105,15 +105,15 @@ button:active{
     transform: scale(1.05);
   }
   .numbers{
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   .icon{
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   .equal{
-    transform: scale(0.93);
+    transform: scale(0.95);
   }
   button:active{
-    transform: scale(0.87);
+    transform: scale(0.92);
   }
 }
