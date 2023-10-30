@@ -14,51 +14,63 @@
     </div>
 
     <div class="button-container">
-      <button class="icon" onclick="display='';
-      document.querySelector('#display').value = display;"><i class="fa-solid fa-c"></i></button>
-      <button class="icon" onclick="display+='%';
-      document.querySelector('#display').value = display;"><i class="fa-solid fa-percent"></i></button>
-      <button class="icon"><i class="fa-solid fa-delete-left"></i></button>
-      <button class="icon" onclick="display+='/';
-      document.querySelector('#display').value = display;"><i class="fa-solid fa-divide"></i></button>
-      <button class="numbers" onclick="display+='7';
-      document.querySelector('#display').value = display;">7</button>
-      <button class="numbers" onclick="display+='8';
-      document.querySelector('#display').value = display;">8</button>
-      <button class="numbers" onclick="display+='9';
-      document.querySelector('#display').value = display;">9</button>
-      <button class="icon" onclick="display+='*';
-      document.querySelector('#display').value = display;"><i class="fa-solid fa-xmark"></i></button>
-      <button class="numbers" onclick="display+='4';
-      document.querySelector('#display').value = display;">4</button>
-      <button class="numbers" onclick="display+='5';
-      document.querySelector('#display').value = display;">5</button>
-      <button class="numbers" onclick="display+='6';
-      document.querySelector('#display').value = display;">6</button>
-      <button class="icon" onclick="display+='-';
-        document.querySelector('#display').value = display"><i class="fa-solid fa-minus"></i></button>
-      <button class="numbers" onclick="display+='1';
-      document.querySelector('#display').value = display;">1</button>
-      <button class="numbers" onclick="display+='2';
-      document.querySelector('#display').value = display;">2</button>
-      <button class="numbers" onclick="display+='3';
-      document.querySelector('#display').value = display;">3</button>
-      <button class="icon"onclick="display+='+';
-      document.querySelector('#display').value = display;"><i class="fa-solid fa-plus"></i></button>
-      <button class="numbers" onclick="display+='00';
-      document.querySelector('#display').value = display;">00</button>
-      <button class="numbers" onclick="display+='0';
-      document.querySelector('#display').value = display;">0</button>
-      <button class="numbers" onclick="display+='.';
-      document.querySelector('#display').value = display;">.</button>
-      <button class="equal" onclick="display=eval(display);
-      document.querySelector('#display').value = display;">=</button>
+      <button class="icon" onclick="clearDisplay()"><i class="fa-solid fa-c"></i></button>
+
+      <button class="icon" onclick="appendToDisplay('%')"><i class="fa-solid fa-percent"></i></button>
+
+      <button class="icon" onclick="deletelast()"><i class="fa-solid fa-delete-left"></i></button>
+
+      <button class="icon" onclick="appendToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+
+      <button class="numbers" onclick="appendToDisplay('7')">7</button>
+      <button class="numbers" onclick="appendToDisplay('8')">8</button>
+
+      <button class="numbers" onclick="appendToDisplay('9')">9</button>
+
+      <button class="icon" onclick="appendToDisplay('*')"><i class="fa-solid fa-xmark"></i></button>
+
+      <button class="numbers" onclick="appendToDisplay('4')">4</button>
+
+      <button class="numbers" onclick="appendToDisplay('5')">5</button>
+
+      <button class="numbers" onclick="appendToDisplay('6')">6</button>
+
+      <button class="icon" onclick="appendToDisplay('-')"><i class="fa-solid fa-minus"></i></button>
+
+      <button class="numbers" onclick="appendToDisplay('1')">1</button>
+
+      <button class="numbers" onclick="appendToDisplay('2')">2</button>
+
+      <button class="numbers" onclick="appendToDisplay('3')">3</button>
+
+      <button class="icon"onclick="appendToDisplay('+')"><i class="fa-solid fa-plus"></i></button>
+
+      <button class="numbers" onclick="appendToDisplay('00')">00</button>
+
+      <button class="numbers" onclick="appendToDisplay('0')">0</button>
+
+      <button class="numbers" onclick="appendToDisplay('.')">.</button>
+
+      <button class="equal" onclick="result()">=</button>
     </div>
   </div>
 
 <script>
-  let display=" ";
-  document.querySelector('#display').value = display;
+const display = document.getElementById("display");
+
+function appendToDisplay(value){
+  display.value+=(value);
+}
+function clearDisplay(){
+  
+  display.value="";
+}
+function deletelast(){
+  display.value=display.value.slice(0,-1);
+}
+function result(){
+  display.value=eval(display.value);
+}
 </script>
 </body>
 </html>
