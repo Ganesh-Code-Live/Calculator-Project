@@ -62,18 +62,6 @@ background-color: #344a7f;
 color:white;
 transition: all 0.2s ease;
 }
-.numbers:hover{
-  background-color: white;
-  color: #273243;
-}
-.icon:hover{
-  background-color: white;
-  color: #273243;
-}
-.equal:hover{
-  background-color: rgb(244, 32, 32);
-  color: white;
-}
 .icon{
   height: 50px;
 width: 70px;
@@ -93,27 +81,35 @@ font-size: 45px;
 font-weight: 540;
 border: none;
 border-radius: 5px;
-background-color: white;
+background-color: crimson;
 color: #273243;
+display: flex;
+align-items: center;
+justify-content: center;
 transition: all 0.2s ease;
 }
 button:active{
   transform: scale(0.97);
+  background-color: white;
+  color: #273243;
 }
 @media (max-width: 600px) {
   .calculator {
-    transform: scale(1.05);
+    transform: scale(1);
+    margin-bottom: 70px;
   }
   .numbers{
-    transform: scale(0.95);
+    transform: scale(1);
   }
   .icon{
-    transform: scale(0.95);
+    transform: scale(1);
   }
   .equal{
-    transform: scale(0.95);
+    transform: scale(1);
   }
   button:active{
-    transform: scale(0.92);
+    transform: scale(0.97);
+    background-color: white;
+    color: #273243;
   }
 }
